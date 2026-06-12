@@ -442,7 +442,7 @@ box-shadow:var(--shadow);
 position:sticky;
 top:18px;
 
-height:calc(100vh - 36px);
+height: fit-content;
 
 overflow:auto;
 
