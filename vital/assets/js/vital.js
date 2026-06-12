@@ -5,10 +5,10 @@
 
 /* =========================================================
    NAVEGAÇÃO ENTRE ABAS PRINCIPAIS
-========================================================= */
+========================================================= 
 
 const tabs = document.querySelectorAll('.menu-tab');
-const contents = document.querySelectorAll('.tab-content');
+/*const contents = document.querySelectorAll('.tab-content');
 
 tabs.forEach(tab => {
 
@@ -27,7 +27,7 @@ tabs.forEach(tab => {
 
     });
 
-});
+});*/
 
 /* =========================================================
    THEME
