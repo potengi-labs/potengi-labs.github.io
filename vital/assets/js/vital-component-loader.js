@@ -175,7 +175,7 @@ async function loadTab(tabName) {
 
         const response =
             await fetch(
-                `assets/tabs/${tabName}.html`
+                `./assets/tabs/${tabName}.html`
             );
 
         if (!response.ok) {
