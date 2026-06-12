@@ -1,17 +1,101 @@
 
-<!-- PAINEL GERAL -->
+            <!-- MINI-SISTEMA -->
 
-        <section id="painel" class="tab-content active">
-
+            <section id="sistema" class="tab-content">
+            
             <div class="section">
 
-                <div class="section-header">
-                    <h2>🧒 Painel de Desenvolvimento Longitudinal</h2>
-                    <small>
-                        Acompanhamento integrado do desenvolvimento, bem-estar,
-                        rotina e aprendizagem de Angelo Victor.
-                    </small>
-                </div>
+    <div class="section-header">
+        <h2>📝 Memória Operacional Longitudinal</h2>
+        <small>
+            Observações • Decisões • Aprendizados • Hipóteses • Continuidade
+        </small>
+    </div>
 
-                
-        </section>
+    <div class="card editor-card">
+
+        <div class="editor-toolbar">
+
+            <div class="editor-title">
+
+                <strong>
+                    Rascunhos e Anotações 
+                </strong>
+
+                <small id="editorStatus">
+                    Pronto
+                </small>
+
+            </div>
+
+<div class="editor-actions">
+
+    <button
+        id="saveEditor"
+        class="editor-btn primary">
+        💾 Salvar Local
+    </button>
+
+    <div class="dropdown">
+
+        <button
+            id="exportMenu"
+            class="editor-btn">
+
+            📤 Exportar ▾
+
+        </button>
+
+        <div
+            class="dropdown-content"
+            id="exportDropdown">
+
+            <button id="exportEditor">
+                📦 JSON Snapshot
+            </button>
+
+            <button id="exportMD">
+                📝 Markdown
+            </button>
+
+            <button id="exportPDF">
+                📄 PDF
+            </button>
+
+            <button id="exportDOCX">
+                📘 Word
+            </button>
+
+        </div>
+
+    </div>
+
+    <button
+        id="importEditor"
+        class="editor-btn">
+        📥 Restaurar
+    </button>
+
+    <button
+        id="clearEditor"
+        class="editor-btn danger">
+        🗑 Limpar
+    </button>
+
+    <input
+        id="importFile"
+        type="file"
+        accept=".json"
+        hidden>
+
+</div>
+
+        </div>
+
+        <div id="editorjs"></div>
+
+    </div>
+
+    </div><!-- .section -->
+</section>
+    
