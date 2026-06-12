@@ -229,6 +229,12 @@ document.addEventListener(
                 id: "footer-container",
                 url:
                 "assets/components/vital-footer.html"
+            },
+
+            {
+                id: "painel-container",
+                url:
+                "assets/tabs/painel.html"
             }
 
         ]);
@@ -243,7 +249,37 @@ document.addEventListener(
             )
         ) {
 
+            loadTab("agenda");
+
+        },
+       {
+
+            loadTab("documentos");
+
+        },
+       {
+
+            loadTab("financeiro");
+
+        },
+       {
+
+            loadTab("manutencao");
+
+        },
+       {
+
+            loadTab("obras");
+
+        },
+       {
+
             loadTab("painel");
+
+        },
+       {
+
+            loadTab("projetos");
 
         }
 
