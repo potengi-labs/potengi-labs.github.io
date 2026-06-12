@@ -204,6 +204,36 @@ async function loadTab(tabName) {
 }
 
 /* ==========================================================
+   MENU DE TABS
+========================================================== */
+
+function initTabs() {
+
+    const tabs =
+        document.querySelectorAll(".menu-tab");
+
+    tabs.forEach(tab => {
+
+        tab.addEventListener("click", () => {
+
+            tabs.forEach(btn =>
+                btn.classList.remove("active")
+            );
+
+            tab.classList.add("active");
+
+            const tabName =
+                tab.dataset.tab;
+
+            loadTab(tabName);
+
+        });
+
+    });
+
+}
+
+/* ==========================================================
    INICIALIZAÇÃO
 ========================================================== */
 
@@ -235,7 +265,7 @@ document.addEventListener(
 
         initMenuToggle();
 
-        /* TAB INICIAL */
+        initTabs();
 
         if (
             document.getElementById(
