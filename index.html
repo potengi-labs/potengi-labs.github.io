@@ -486,8 +486,8 @@ de empreendedorismo.</p>
 
 <div class="hero-buttons">
 <a href="#" class="btn btn-primary">LumOS</a>
-<a href="#" class="btn btn-primary" onclick="openContinuumVideo(); return false;">    Continuum</a>
-<a href="#" class="btn btn-primary">BookOS</a>
+<a href="#" class="btn btn-primary"    onclick="openVideo('https://www.youtube.com/embed/1ZHL_kFyM9w?autoplay=1'); return false;">  Continuum</a>
+<a href="#" class="btn btn-primary"   onclick="openVideo('https://www.youtube.com/embed/gGIABvVp7Ns?autoplay=1'); return false;">   BookOS </a>
 <!--<a href="#" class="btn btn-outline">Fale com a Equipe</a>-->
 </div>
 
@@ -508,18 +508,18 @@ de empreendedorismo.</p>
 
 
   <!-- MODAL -->
-<div id="continuumModal"
-     style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:9999;align-items:center;justify-content:center;">
+<div id="videoModal"
+     style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:9999;align-items:center;justify-content:center;">
 
-    <div style="position:relative;width:min(90vw,960px);">
+    <div style="position:relative;width:min(90vw,1100px);">
 
-        <button onclick="closeContinuumVideo()"
-                style="position:absolute;top:-40px;right:0;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;">
+        <button onclick="closeVideo()"
+                style="position:absolute;top:-50px;right:0;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;">
             ×
         </button>
 
         <div style="position:relative;padding-bottom:56.25%;height:0;">
-            <iframe id="continuumFrame"
+            <iframe id="videoFrame"
                     src=""
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
@@ -534,33 +534,28 @@ de empreendedorismo.</p>
 
   
 <script>
-function openContinuumVideo() {
-    const modal = document.getElementById('continuumModal');
-    const frame = document.getElementById('continuumFrame');
+function openVideo(url) {
+    const modal = document.getElementById('videoModal');
+    const frame = document.getElementById('videoFrame');
 
+    frame.src = url;
     modal.style.display = 'flex';
-    frame.src = 'https://www.youtube.com/embed/1ZHL_kFyM9w?autoplay=1';
 }
 
-function closeContinuumVideo() {
-    const modal = document.getElementById('continuumModal');
-    const frame = document.getElementById('continuumFrame');
+function closeVideo() {
+    const modal = document.getElementById('videoModal');
+    const frame = document.getElementById('videoFrame');
 
     modal.style.display = 'none';
     frame.src = '';
 }
 
-const continuumModal = document.getElementById('continuumModal');
-
-if (continuumModal) {
-    continuumModal.addEventListener('click', function(e) {
-        if (e.target === this) {
-            closeContinuumVideo();
-        }
-    });
-}
+document.getElementById('videoModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeVideo();
+    }
+});
 </script>
-
 
   
 </body>
