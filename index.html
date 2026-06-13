@@ -526,5 +526,26 @@ de empreendedorismo.</p>
 
 </div>
 
+<script>
+function openContinuumVideo() {
+    document.getElementById('continuumModal').style.display = 'flex';
+
+    document.getElementById('continuumFrame').src =
+        'https://www.youtube.com/embed/1ZHL_kFyM9w?autoplay=1';
+}
+
+function closeContinuumVideo() {
+    document.getElementById('continuumModal').style.display = 'none';
+
+    document.getElementById('continuumFrame').src = '';
+}
+
+document.getElementById('continuumModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeContinuumVideo();
+    }
+});
+</script>
+  
 </body>
 </html>
